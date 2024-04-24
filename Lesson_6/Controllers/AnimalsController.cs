@@ -16,7 +16,7 @@ public class AnimalsController: ControllerBase
     }
 
     [HttpGet]
-    public IActionResult GetAnimals([FromQuery] string orderBy = "name")
+    public IActionResult GetAnimals(string orderBy = "name")
     {
         var orderByColumn = orderBy.ToLower() switch
         {
